@@ -9,11 +9,11 @@ command(
   },
   async (message, match) => {
     const start = new Date().getTime();
-    await message.sendMessage(message.jid, "```Ping!```");
+    await message.sendMessage(message.jid, "_ρɪꪀɢ 🤷🏻‍♀️!_");
     const end = new Date().getTime();
     return await message.sendMessage(
       message.jid,
-      "*Pong!*\n ```" + (end - start) + "``` *ms*"
+      "_ρꪮꪀɢ !_\n ```" + (end - start) + "``` *ms 🙎🏻‍♀️*"
     );
   }
 );
