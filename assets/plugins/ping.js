@@ -13,7 +13,7 @@ command(
     const end = new Date().getTime();
     return await message.sendMessage(
       message.jid,
-      "_ρꪮꪀɢ !_\n ```" + (end - start) + "``` *ms 🙎🏻‍♀️*"
+      "_ρꪮꪀɢ !_\n ```" + (end - start) + "``` _*ms 🏃🏻‍♀️*_"
     );
   }
 );
