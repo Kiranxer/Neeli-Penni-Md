@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/X-Electra/X-Asena.git /xasena
-WORKDIR /xasena
+RUN git clone https://github.com/Kiranxer/Neeli-Penni-Md /Neeli
+WORKDIR /Neeli
 RUN npm install
 CMD ["node", "index.js"]
