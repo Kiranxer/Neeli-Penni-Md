@@ -1,5 +1,5 @@
 {
-  "name": "x-asena",
+  "name": "Neeli-Penni-Md",
   "version": "2.0.0",
   "description": "Whatsapp Bot",
   "main": "index.js",
@@ -44,16 +44,16 @@
     "socket.io-client": "^4.7.5",
     "spotifydl-core": "^0.2.0",
     "sqlite3": "^5.1.7",
-    "x-asena": "^1.0.1",
+    "neeli-peeni-md": "^1.0.1",
     "ytsr": "^3.8.4"
   },
   "scripts": {
     "start": "node index.js",
-    "log": "pm2 start index.js --name x-asena && pm2 logs x-asena"
+    "log": "pm2 start index.js --name neeli && pm2 logs neeli"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/X-Electra/X-Asena.git"
+    "url": "git+https://github.com/Kiranxer/Neeli-Penni-Md.git"
   },
   "keywords": [
     "bot",
@@ -62,7 +62,7 @@
   "author": "Neeraj-x0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/X-Electra/X-Asena/issues"
+    "url": "https://github.com/Kiranxer/Neeli-Penni-Md/issues"
   },
-  "homepage": "https://github.com/X-Electra/X-Asena#readme"
+  "homepage": "https://github.com/Kiranxer/Neeli-Penni-Md#readme"
 }
