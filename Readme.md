@@ -37,7 +37,7 @@
 
 <br><br><br>
 <p align="center">
-  <a href="https://chat.whatsapp.com/JKdPcantKre0Mx3mzNUdIu"><img title="Join Whatsapp Group" src="https://raw.githubusercontent.com/Alien-alfa/PublicBot/main/wlogo.svg.png" width="600"></a>
+  <a href="https://chat.whatsapp.com/COgYkTcERcw77juzyEbBy3"><img title="Join Whatsapp Group" src="https://raw.githubusercontent.com/Alien-alfa/PublicBot/main/wlogo.svg.png" width="600"></a>
 </p>
 <br><br>
 
