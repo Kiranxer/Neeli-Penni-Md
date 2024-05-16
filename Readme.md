@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-<strong>N E E L I  P E N N I－ＭＤ</strong>
+<strong>N E E L I－P E N N I－ＭＤ</strong>
 </p>
 
 <p align="center">
