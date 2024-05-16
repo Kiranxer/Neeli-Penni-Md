@@ -44,7 +44,7 @@
     "socket.io-client": "^4.7.5",
     "spotifydl-core": "^0.2.0",
     "sqlite3": "^5.1.7",
-    "neeli-peeni-md": "^1.0.1",
+    "x-asena": "^1.0.1",
     "ytsr": "^3.8.4"
   },
   "scripts": {
