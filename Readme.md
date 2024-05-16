@@ -24,7 +24,7 @@
 
 
 <p align="center">
-  <a href="https://www.instagram.com/_the_soul_rider_/"><img src="https://github.com/Alien-alfa/Alien-alfa/blob/beta/img/Bungee%20Shades.png?raw=true" width="500" alt="Profile"/> </a>
+  <a href="https://instagram.com/whois.kiran.xer"><img src="https://graph.org/file/7d7d6c6dd033001981b9d.jpg" width="500" alt="Profile"/> </a>
 </p>
 
 <p align="center">
