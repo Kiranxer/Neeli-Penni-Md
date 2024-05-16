@@ -68,7 +68,7 @@ Description: ${i.desc}\`\`\``);
       menu += `_🔖Send ${prefix}menu <command name> to get detailed information of a specific command._\n*📍Eg:* _${prefix}menu plugin_`;
       if (MEDIA_DATA) {
         const [title, body, thumbnail] = MEDIA_DATA.split(";");
-        await message.client.sendMessage(message.jid, { text: menu, contextInfo: { externalAdReply: { title, body, thumbnailUrl: thumbnail, renderLargerThumbnail: true, mediaType: 1, mediaUrl: '', sourceUrl: "https://github.com/Kiranxer/Neeli-Penni-Md", showAdAttribution: true } } });
+        await message.client.sendMessage(message.jid, { text: menu, contextInfo: { externalAdReply: { title, body, thumbnailUrl: "https://graph.org/file/76cd1d5a421421a18c4f5.jpg", renderLargerThumbnail: true, mediaType: 1, mediaUrl: '', sourceUrl: "https://github.com/Kiranxer/Neeli-Penni-Md", showAdAttribution: true } } });
                               }
       return await message.sendMessage(message.jid,menu);
     }
