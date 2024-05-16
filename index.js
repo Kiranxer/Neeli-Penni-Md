@@ -22,7 +22,7 @@ const readAndRequireFiles = async (directory) => {
 
 async function initialize() {
  
-  console.log("X-Asena");
+  console.log("Neeli-Penni-Md");
   try {
     await readAndRequireFiles(path.join(__dirname, "/assets/database/"));
     console.log("Syncing Database");
