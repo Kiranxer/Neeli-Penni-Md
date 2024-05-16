@@ -66,6 +66,10 @@ Description: ${i.desc}\`\`\``);
 
       menu += `\n`;
       menu += `_🔖Send ${prefix}menu <command name> to get detailed information of a specific command._\n*📍Eg:* _${prefix}menu plugin_`;
+      if (MEDIA_DATA) {
+        const [title, body, thumbnail] = MEDIA_DATA.split(";");
+        await message.client.sendMessage(message.jid, { text: menu, contextInfo: { externalAdReply: { title, body, thumbnailUrl: thumbnail, renderLargerThumbnail: true, mediaType: 1, mediaUrl: '', sourceUrl: "https://github.com/Kiranxer/Neeli-Penni-Md", showAdAttribution: true } } });
+                              }
       return await message.sendMessage(message.jid,menu);
     }
   }
