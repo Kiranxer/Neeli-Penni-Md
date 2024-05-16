@@ -7,7 +7,7 @@
 # `Scan QR Code For Session`
 
 # `❗SCAN QR❗`
- <a href="https://apex-alien-alfa.vercel.app"><img title="N E E L I  P E N N I" src="https://repl.it/badge/github/quiec/whatsasena" width="300"></a>
+ <a href="https://neeli-md-qr.onrender.com/"><img title="N E E L I  P E N N I" src="https://repl.it/badge/github/quiec/whatsasena" width="300"></a>
   <br><br><br>
 # `Change Session In Github`
 
