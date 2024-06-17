@@ -24,9 +24,9 @@ command(
                 rows: [
                   {
                     header: "title",
-                    title: "Command 1", // Replace with actual command 1
-                    description: "Description of command 1", // Replace with actual description
-                    id: "#command1", // Unique ID for this button
+                    title: "List", // Replace with actual command 1
+                    description: "List of cmds", // Replace with actual description
+                    id: "#list", // Unique ID for this button
                   },
                   {
                     header: "title",
