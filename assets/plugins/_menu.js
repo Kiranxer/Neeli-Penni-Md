@@ -3,7 +3,7 @@ const { command, isPrivate } = require("../../lib");
 command(
   {
     pattern: "menu",
-    fromMe: IsPrivate,
+    fromMe: isPrivate,
     desc: "send a button message",
     usage: "#button",
     type: "message",
