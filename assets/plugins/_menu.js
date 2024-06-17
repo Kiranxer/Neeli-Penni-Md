@@ -5,9 +5,9 @@ command(
   {
     pattern: "menu",
     fromMe: isPrivate,
-    desc: "send a button message",
-    usage: "#button",
-    type: "message",
+    desc: "Show All Commands",
+    dontAddCommandList: true,
+    type: "user",
   },
   async (message, match, m) => {
     let data = {
@@ -88,7 +88,7 @@ command(
           header: "title",
           title: cmdName, 
           description: command.desc || "No description available",
-          id: #${cmdName.replace(/\s/g, "")}, // Unique ID for each command
+          id: #${cmdName}, // Unique ID for each command
         });
       }
     });
