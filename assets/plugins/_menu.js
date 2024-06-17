@@ -1,5 +1,5 @@
 const plugins = require("../../lib/plugins");
-const { command, isPrivate } = require("../../lib");
+const { command, isPrivate, pm2Uptime } = require("../../lib");
 
 command(
   {
