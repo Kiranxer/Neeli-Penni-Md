@@ -20,37 +20,25 @@ command(
             title: "🤖 WhatsApp Bot Menu 🤖",
             sections: [
               {
-                title: "Main Features",
+                title: "𝐌𝐚𝐢𝐧 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬",
                 rows: [
                   {
-                    header: "title",
-                    title: "List", // Replace with actual command 1
-                    description: "List of cmds", // Replace with actual description
+                    header: "𝐓𝐢𝐭𝐥𝐞 - 𝟏",
+                    title: "𝐋𝐢𝐬𝐭", // Replace with actual command 1
+                    description: "𝐋𝐢𝐬𝐭 𝐨𝐟 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬", // Replace with actual description
                     id: ":list", // Unique ID for this button
-                  },
-                  {
-                    header: "title",
-                    title: "Command 2", // Replace with actual command 2
-                    description: "Description of command 2", // Replace with actual description
-                    id: "#command2", // Unique ID for this button
                   },
                   // Add more commands here
                 ],
               },
               {
-                title: "Other Options",
+                title: "Under Maintenance 🫦",
                 rows: [
                   {
-                    header: "title",
-                    title: "Get Help",
-                    description: "Get assistance with the bot",
-                    id: "#help", // Unique ID for this button
-                  },
-                  {
-                    header: "title",
-                    title: "About",
-                    description: "Learn more about this bot",
-                    id: "#about", // Unique ID for this button
+                    header: "umb",
+                    title: "umbikko",
+                    description: "Get umbal with the bot",
+                    id: ":plugin", // Unique ID for this button
                   },
                 ],
               },
