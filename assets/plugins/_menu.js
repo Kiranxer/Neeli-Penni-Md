@@ -79,6 +79,9 @@ command(
       body: {
         text: "*𝐈𝐟 𝐘𝐨𝐮𝐫 𝐌𝐢𝐧𝐝  𝐅𝐨𝐫𝐠𝐞𝐭 𝐀𝐛𝐨𝐮𝐭 𝐒𝐨𝐦𝐞𝐨𝐧𝐞, 𝐓𝐡𝐞 𝐇𝐞𝐚𝐫𝐭 𝐑𝐞𝐦𝐢𝐧𝐝𝐬 𝐓𝐡𝐚𝐭 𝐏𝐞𝐫𝐬𝐨𝐧 🫀🌸>!!*",
       },
+      media: { // Add this object
+        url: "https://example.com/your-image.jpg" // Replace with your image URL
+      }
     };
     return await message.sendMessage(message.jid, data, {}, "interactive");
   }
