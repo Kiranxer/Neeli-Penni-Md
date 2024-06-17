@@ -1,107 +1,84 @@
-const plugins = require("../../lib/plugins");
-const { command, isPrivate, clockString, pm2Uptime } = require("../../lib");
-const { OWNER_NAME, BOT_NAME } = require("../../config");
-const { hostname } = require("os");
+const { command, isPrivate } = require("../../lib");
 
 command(
   {
     pattern: "menu",
-    fromMe: isPrivate,
-    desc: "Show All Commands",
-    dontAddCommandList: true,
-    type: "user",
+    fromMe: IsPrivate,
+    desc: "send a button message",
+    usage: "#button",
+    type: "message",
   },
-  async (message, match) => {
-   
-    if (match) {
-      for (let i of plugins.commands) {
-        if (
-          i.pattern instanceof RegExp &&
-          i.pattern.test(message.prefix + match)
-        ) {
-          const cmdName = i.pattern.toString().split(/\W+/)[1];
-          message.reply(`\`\`\`Command: ${message.prefix}${cmdName.trim()}
-Description: ${i.desc}\`\`\``);
-        }
-      }
-    } else {
-      let { prefix } = message;
-      let [date, time] = new Date()
-        .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
-        .split(",");
-      let menu = `╭━━━━━ᆫ ${BOT_NAME} ᄀ━━━
-┃ ⎆  *OWNER*:  ${OWNER_NAME}
-┃ ⎆  *PREFIX*: ${prefix}
-┃ ⎆  *HOST NAME*: ${hostname().split("-")[0]}
-┃ ⎆  *DATE*: ${date}
-┃ ⎆  *TIME*: ${time}
-┃ ⎆  *COMMANDS*: ${plugins.commands.length} 
-┃ ⎆  *UPTIME*: ${clockString(process.uptime())} 
-╰━━━━━━━━━━━━━━━\n`;
-      let cmnd = [];
-      let cmd;
-      let category = [];
-      plugins.commands.map((command, num) => {
-        if (command.pattern instanceof RegExp) {
-          cmd = command.pattern.toString().split(/\W+/)[1];
-        }
+  async (message, match, m) => {
+    let data = {
+      jid: message.jid,
+      button: [
+        // List Button (Main Menu)
+        {
+          type: "list",
+          params: {
+            title: "🤖 WhatsApp Bot Menu 🤖",
+            sections: [
+              {
+                title: "Main Features",
+                rows: [
+                  {
+                    header: "title",
+                    title: "Command 1", // Replace with actual command 1
+                    description: "Description of command 1", // Replace with actual description
+                    id: "#command1", // Unique ID for this button
+                  },
+                  {
+                    header: "title",
+                    title: "Command 2", // Replace with actual command 2
+                    description: "Description of command 2", // Replace with actual description
+                    id: "#command2", // Unique ID for this button
+                  },
+                  // Add more commands here
+                ],
+              },
+              {
+                title: "Other Options",
+                rows: [
+                  {
+                    header: "title",
+                    title: "Get Help",
+                    description: "Get assistance with the bot",
+                    id: "#help", // Unique ID for this button
+                  },
+                  {
+                    header: "title",
+                    title: "About",
+                    description: "Learn more about this bot",
+                    id: "#about", // Unique ID for this button
+                  },
+                ],
+              },
+            ],
+          },
+        },
 
-        if (!command.dontAddCommandList && cmd !== undefined) {
-          let type = command.type ? command.type.toLowerCase() : "misc";
-
-          cmnd.push({ cmd, type });
-
-          if (!category.includes(type)) category.push(type);
-        }
-      });
-      cmnd.sort();
-      category.sort().forEach((cmmd) => {
-        menu += `\n\t⦿---- *${cmmd.toUpperCase()}* ----⦿\n`;
-        let comad = cmnd.filter(({ type }) => type == cmmd);
-        comad.forEach(({ cmd }) => {
-          menu += `\n⛥  _${cmd.trim()}_ `;
-        });
-        menu += `\n`;
-      });
-
-      menu += `\n`;
-      menu += `_🔖Send ${prefix}menu <command name> to get detailed information of a specific command._\n*📍Eg:* _${prefix}menu plugin_`;
-      
-      return await message.sendMessage(message.jid,menu);
-    }
-  }
-);
-
-
-command(
-  {
-    pattern: "list",
-    fromMe: isPrivate,
-    desc: "Show All Commands",
-    type: "user",
-    dontAddCommandList: true,
-  },
-  async (message, match, { prefix }) => {
-    let menu = "\t\t```Command List```\n";
-
-    let cmnd = [];
-    let cmd, desc;
-    plugins.commands.map((command) => {
-      if (command.pattern) {
-        cmd = command.pattern.toString().split(/\W+/)[1];
-      }
-      desc = command.desc || false;
-
-      if (!command.dontAddCommandList && cmd !== undefined) {
-        cmnd.push({ cmd, desc });
-      }
-    });
-    cmnd.sort();
-    cmnd.forEach(({ cmd, desc }, num) => {
-      menu += `\`\`\`${(num += 1)} ${cmd.trim()}\`\`\`\n`;
-      if (desc) menu += `Use: \`\`\`${desc}\`\`\`\n\n`;
-    });
-    menu += ``;
-    return await message.reply(menu);
+      // URL Button (GitHub Link)
+        {
+          type: "url",
+          params: {
+            display_text: "GitHub",
+            url: "https://github.com/Kiranxer/Neeli-Penni-Md",
+            merchant_url: "https://github.com/Kiranxer/Neeli-Penni-Md",
+          },
+        },
+      ],
+      header: {
+        title: "𝚴𝛆𝛆ʟ𝛊  𝚸𝛆𝛆ꪀ𝛊  𝚳ᴅ  🧚🏻‍♀️",
+        subtitle: "WhatsApp Bot",
+        hasMediaAttachment: false,
+      },
+      footer: {
+        text: "𝐊𝐢𝐫𝐚𝐧-𝐗𝐞𝐫 (𝐁𝐞𝐭𝐚) 𝐕𝟏",
+      },
+      body: {
+        text: "*𝐈𝐟 𝐘𝐨𝐮𝐫 𝐌𝐢𝐧𝐝  𝐅𝐨𝐫𝐠𝐞𝐭 𝐀𝐛𝐨𝐮𝐭 𝐒𝐨𝐦𝐞𝐨𝐧𝐞, 𝐓𝐡𝐞 𝐇𝐞𝐚𝐫𝐭 𝐑𝐞𝐦𝐢𝐧𝐝𝐬 𝐓𝐡𝐚𝐭 𝐏𝐞𝐫𝐬𝐨𝐧 🫀🌸>!!*",
+      },
+    };
+    return await message.sendMessage(message.jid, data, {}, "interactive");
   }
 );
