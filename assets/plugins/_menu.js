@@ -80,6 +80,19 @@ command(
         text: "*𝐈𝐟 𝐘𝐨𝐮𝐫 𝐌𝐢𝐧𝐝  𝐅𝐨𝐫𝐠𝐞𝐭 𝐀𝐛𝐨𝐮𝐭 𝐒𝐨𝐦𝐞𝐨𝐧𝐞, 𝐓𝐡𝐞 𝐇𝐞𝐚𝐫𝐭 𝐑𝐞𝐦𝐢𝐧𝐝𝐬 𝐓𝐡𝐚𝐭 𝐏𝐞𝐫𝐬𝐨𝐧 🫀🌸>!!*",
       },
     };
+    let commandsSection = data.button[0].params.sections[0].rows;
+    plugins.commands.forEach((command, index) => {
+      if (!command.dontAddCommandList && command.pattern) {
+        let cmdName = command.pattern.toString().split(/\W+/)[1];
+        commandsSection.push({
+          header: "title",
+          title: cmdName, 
+          description: command.desc || "No description available",
+          id: #${cmdName.replace(/\s/g, "")}, // Unique ID for each command
+        });
+      }
+    });
+
     return await message.sendMessage(message.jid, data, {}, "interactive");
   }
 );
