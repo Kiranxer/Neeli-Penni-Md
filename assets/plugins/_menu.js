@@ -10,7 +10,6 @@ command(
     type: "user",
   },
   async (message, match, m) => {
-    let buffer = "https://i.imgur.com/WYH3V5h.jpeg"
     let data = {
       jid: message.jid,
       button: [
@@ -81,6 +80,6 @@ command(
         text: "*𝐈𝐟 𝐘𝐨𝐮𝐫 𝐌𝐢𝐧𝐝  𝐅𝐨𝐫𝐠𝐞𝐭 𝐀𝐛𝐨𝐮𝐭 𝐒𝐨𝐦𝐞𝐨𝐧𝐞, 𝐓𝐡𝐞 𝐇𝐞𝐚𝐫𝐭 𝐑𝐞𝐦𝐢𝐧𝐝𝐬 𝐓𝐡𝐚𝐭 𝐏𝐞𝐫𝐬𝐨𝐧 🫀🌸>!!*",
       },
     };
-    return await message.sendMessage(message.jid, buffer, {}, "image", data, {}, "interactive");
+    return await message.sendMessage(message.jid, data, {}, "interactive");
   }
 );
