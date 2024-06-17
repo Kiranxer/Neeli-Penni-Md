@@ -26,7 +26,7 @@ command(
                     header: "title",
                     title: "List", // Replace with actual command 1
                     description: "List of cmds", // Replace with actual description
-                    id: "#list", // Unique ID for this button
+                    id: "${prefix} list", // Unique ID for this button
                   },
                   {
                     header: "title",
