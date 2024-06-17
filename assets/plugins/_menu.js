@@ -1,3 +1,4 @@
+const plugins = require("../../lib/plugins");
 const { command, isPrivate } = require("../../lib");
 
 command(
