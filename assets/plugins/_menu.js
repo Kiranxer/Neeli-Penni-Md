@@ -71,7 +71,7 @@ command(
       header: {
         title: "𝚴𝛆𝛆ʟ𝛊  𝚸𝛆𝛆ꪀ𝛊  𝚳ᴅ  🧚🏻‍♀️",
         subtitle: "WhatsApp Bot",
-        hasMediaAttachment: true, // Set this to true
+        hasMediaAttachment: false,
       },
       footer: {
         text: "𝐊𝐢𝐫𝐚𝐧-𝐗𝐞𝐫 (𝐁𝐞𝐭𝐚) 𝐕𝟏",
@@ -79,17 +79,6 @@ command(
       body: {
         text: "*𝐈𝐟 𝐘𝐨𝐮𝐫 𝐌𝐢𝐧𝐝  𝐅𝐨𝐫𝐠𝐞𝐭 𝐀𝐛𝐨𝐮𝐭 𝐒𝐨𝐦𝐞𝐨𝐧𝐞, 𝐓𝐡𝐞 𝐇𝐞𝐚𝐫𝐭 𝐑𝐞𝐦𝐢𝐧𝐝𝐬 𝐓𝐡𝐚𝐭 𝐏𝐞𝐫𝐬𝐨𝐧 🫀🌸>!!*",
       },
-      media: { 
-        url: "https://i.imgur.com/WYH3V5h.jpeg"
-      },
-      contextInfo: { 
-        externalAdReply: { 
-          title: "Check out this amazing offer!", 
-          body: "Get 50% off on your first purchase!",
-          mediaType: "PHOTO", 
-          mediaUrl: "https://i.imgur.com/WYH3V5h.jpeg",
-          sourceUrl: "https://example.com/your-landing-page.com",
-      }
     };
     return await message.sendMessage(message.jid, data, {}, "interactive");
   }
