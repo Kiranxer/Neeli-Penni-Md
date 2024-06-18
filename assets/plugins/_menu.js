@@ -132,3 +132,38 @@ Description: ${i.desc}\`\`\``;
         menu += `\n┃✧╰─────────────────
 ╰══════════════════⊷❍`;
       });
+let data = {
+  jid: message.jid,
+  button: [
+    {
+      type: "reply",
+      params: {
+        display_text: "LIST",
+        id: "#list",
+      },
+    },
+    {
+      type: "url",
+      params: {
+        display_text: "INSTAGRAM",
+        url: "https://www.instagram.com/whois.kiran.xer",
+        merchant_url: "https://www.instagram.com/whois.kiran.xer",
+      },
+    },
+  ],
+  footer: {
+    text: "𝐊𝐢𝐫𝐚𝐧-𝐗𝐞𝐫 (𝐁𝐞𝐭𝐚) 𝐕𝟏",
+  },
+  body: {
+   text: await menu
+  },
+};
+
+
+
+return await message.sendMessage(message.jid, data, {}, "interactive");
+
+    } catch (error) {
+      console.error("[Error]:", error);
+    }
+})
