@@ -3,7 +3,7 @@ const { command, isPrivate, pm2Uptime } = require("../../lib");
 
 command(
   {
-    pattern: "menu",
+    pattern: "alive",
     fromMe: isPrivate,
     desc: "Show All Commands",
     dontAddCommandList: true,
