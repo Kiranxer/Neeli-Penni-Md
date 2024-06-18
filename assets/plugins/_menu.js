@@ -158,9 +158,6 @@ let data = {
    text: await menu
   },
 };
-
-
-
 return await message.sendMessage(message.jid, data, {}, "interactive");
   }
 );
