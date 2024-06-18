@@ -162,8 +162,5 @@ let data = {
 
 
 return await message.sendMessage(message.jid, data, {}, "interactive");
-
-    } catch (error) {
-      console.error("[Error]:", error);
-    }
-})
+  }
+);
