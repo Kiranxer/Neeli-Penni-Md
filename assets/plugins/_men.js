@@ -42,7 +42,6 @@ command(
 Description: ${i.desc}\`\`\``);
         }
       }
-    } else {
       let { prefix } = message;
       let [date, time] = new Date()
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
