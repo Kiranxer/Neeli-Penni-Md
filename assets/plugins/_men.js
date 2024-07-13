@@ -12,6 +12,24 @@ command(
     type: "user",
   },
   async (message, match) => {
+    let data = {
+      jid: message.jid,
+      button: [
+        {
+          type: "list",
+          params: {
+            title: "Button 1",
+            sections: [
+              {
+                title: "Button 1",
+                rows: [
+                  {
+                    header: "title",
+                    title: "Button 1",
+                    description: "Description 1",
+                    id: "#menu",
+                  },
+                ],
    
     if (match) {
       for (let i of plugins.commands) {
@@ -66,7 +84,7 @@ Description: ${i.desc}\`\`\``);
 
       menu += `\n`;
       menu += `_🔖Send ${prefix}menu <command name> to get detailed information of a specific command._\n*📍Eg:* _${prefix}menu plugin_`;
-      return await message.sendMessage(message.jid,menu);
+      return await message.sendMessage(message.jid,menu,data);
     }
   }
 );
