@@ -13,7 +13,7 @@ command(
   },
   async (message, match, m) => {
 
-    let imageURL = 'https://www.example.com/your_image.jpg';
+    let imageURL = 'https://telegra.ph/file/750e455ec12fb47ca5852.png';
 
     try {
       const response = await axios.get(imageURL, { responseType: 'arraybuffer' });
