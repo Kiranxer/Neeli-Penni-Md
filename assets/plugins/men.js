@@ -1,7 +1,7 @@
 const plugins = require("../../lib/plugins");
 const { command, isPrivate, pm2Uptime } = require("../../lib");
 const axios = require('axios');
-const { WAConnection: _WAConnection, MessageType, Presence, Mimetype, GroupSettingChange } = require('@adiwajshing/baileys');
+const { WAConnection: _WAConnection, MessageType, Presence, Mimetype, GroupSettingChange } = require('@whiskeysockets/baileys');
 
 command(
   {
