@@ -13,7 +13,7 @@ command(
   },
   async (message, match, m) => {
 
-    let imageURL = 'https://www.example.com/your_image.jpg'; // Replace with your image URL
+    let imageURL = 'https://www.example.com/your_image.jpg';
 
     try {
       const response = await axios.get(imageURL, { responseType: 'arraybuffer' });
@@ -25,7 +25,7 @@ command(
             showAdAttribution: true,
             title: "Kiran-Xer (Beta) V1",
             body: "WhatsApp Bot",
-            mediaType: 2, // 1 for image, 2 for video, 3 for document
+            mediaType: 2,
             mediaUrl: imageURL,
             sourceUrl: 'https://github.com/Kiranxer/Neeli-Penni-Md' 
           }
