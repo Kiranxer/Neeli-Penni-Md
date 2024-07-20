@@ -11,6 +11,7 @@ module.exports = {
   LOGS: toBool(process.env.LOGS) || true,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   SESSION_ID: process.env.SESSION_ID || "",
+  PORT: toBool(process.env.PORT) || 3000,
   LANG: process.env.LANG || "EN",
   AUTH_TOKEN: "",
   HANDLERS:
